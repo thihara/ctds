@@ -208,7 +208,7 @@ specified in the SQL statement. Parameter notation is specified by
                             (1);
                         '''
                     )
-                except ctds.ProgrammingError as ex:
+                except ctds.IntegrityError as ex:
                     regex = r'''Violation of PRIMARY KEY constraint 'PK__[^']+'. ''' \
                             r'''Cannot insert duplicate key in object 'dbo\.@tTable'. ''' \
                             r'''The duplicate key value is \(1\).'''
