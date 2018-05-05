@@ -496,6 +496,7 @@ void Connection_raise_lasterror(struct Connection* connection)
                 */
                 switch (msgno)
                 {
+                    case 220: /* Arithmetic overflow error for data type %ls, value = %ld. */
                     case 517: /* Adding a value to a '%ls' column caused an overflow. */
                     case 518: /* Cannot convert data type %ls to %ls. */
                     case 529: /* Explicit conversion from data type %ls to %ls is not allowed. */
