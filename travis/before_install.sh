@@ -18,7 +18,9 @@ else
     # Travis-ci doesn't support Python on OS X. Install it manually for now.
     brew update
     brew install freetds
-    brew install python3
+    if ! `brew list python3` ; then
+        brew install python3
+    fi
     virtualenv venv -p python3
     source venv/bin/activate
 fi

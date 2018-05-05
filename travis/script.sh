@@ -6,5 +6,5 @@ if [ -z "$TRAVIS" ]; then
 fi
 
 if [ "$TRAVIS_OS_NAME" != "osx" ]; then
-    make ${CTDS_MAKE_TARGET};
+    make ${CTDS_MAKE_TARGET} VERBOSE=1;
 fi
